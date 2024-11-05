@@ -2,8 +2,8 @@
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="ask tfl for url",
-    api_key="ask tfl for api"
+    base_url="https://api.gptsapi.net/v1",
+    api_key="xxxx"
 )
 
 import gradio as gr
@@ -21,8 +21,7 @@ def interact(chatbot: List[Tuple[str, str]], user_input: str) -> List[Tuple[str,
         messages=[
             {"role": "system", "content": "you are a helpful assistant."},
             {
-                "role": "user",
-                "content": user_input
+                "role": "user", "content": user_input
             }
 
         ]

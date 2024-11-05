@@ -10,10 +10,10 @@ response = client.chat.completions.create(
         {"role": "system", "content": "you are a helpful assistant."},
         {
             "role": "user",
-            "content": "give me a five"
+            "content": "i need some emoji"
         }
 
     ]
 )
 
-print(response.choices[0].message)
+print(response.choices[0].message.content)
